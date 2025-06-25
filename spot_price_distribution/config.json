@@ -1,0 +1,28 @@
+{
+  "name": "Spot Price + Distribution",
+  "version": "1.0",
+  "slug": "spot_price_distribution",
+  "description": "Načítá spotové ceny a přičítá distribuční poplatky podle tarifu",
+  "startup": "once",
+  "boot": "auto",
+  "hassio_api": false,
+  "homeassistant_api": false,
+  "options": {
+    "nt_rate": 1.2,
+    "vt_rate": 2.5,
+    "nt_hours": ["00:00-06:00", "22:00-23:59"],
+    "mqtt_host": "core-mosquitto",
+    "mqtt_port": 1883,
+    "mqtt_user": "homeassistant",
+    "mqtt_pass": "tajneheslo"
+  },
+  "schema": {
+    "nt_rate": "float",
+    "vt_rate": "float",
+    "nt_hours": ["str"],
+    "mqtt_host": "str",
+    "mqtt_port": "int",
+    "mqtt_user": "str",
+    "mqtt_pass": "str"
+  }
+}
